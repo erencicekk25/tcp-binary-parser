@@ -250,3 +250,7 @@ Projede iki farklı yaklaşım var ve bu bilinçli bir tercih:
 - Pakette checksum ya da CRC alanı yok. TCP kendi bütünlük kontrolünü yaptığı için çoğu senaryoda bu yeterli. Ancak veri yol üzerinde bir seri hat ya da başka bir ara katmandan geçiyorsa başlığa bir CRC-16 alanı eklemenizi öneririm.
 - Sunucu tek thread'de çalışıyor. Yüzlerce eşzamanlı cihaz için `epoll` ya da benzeri bir mekanizmaya geçmek daha mantıklı olur.
 - Bağlantılarda şifreleme yok. Güvenilmeyen bir ağda kullanacaksanız trafiği VPN ya da TLS sonlandırıcı bir proxy arkasına almanız gerekir.
+
+## Lisans
+
+Bu proje MIT lisansı ile dağıtılıyor. Ticari projeler dahil dilediğiniz gibi kullanabilir, değiştirebilir ve dağıtabilirsiniz; tek şart lisans metnini korumanız. Ayrıntılar için [LICENSE](LICENSE) dosyasına bakabilirsiniz.
