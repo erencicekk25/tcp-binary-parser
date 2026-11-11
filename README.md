@@ -1,5 +1,9 @@
 # tcp-binary-parser
 
+[![CI](https://github.com/erencicekk25/tcp-binary-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/erencicekk25/tcp-binary-parser/actions/workflows/ci.yml)
+![Language](https://img.shields.io/badge/C%2B%2B-17-blue.svg)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 Sahadaki sensörlerden TCP üzerinden gelen ikili (binary) paketleri okuyup çözen, küçük ve bağımlılıksız bir C++17 projesi. Protokol katmanı tek bir başlık dosyasından ibaret; projeye eklemek için `PacketProtocol.hpp` dosyasını kopyalamanız yeterli. Yanında da bu protokolü konuşan, `poll()` tabanlı hafif bir TCP sunucusu var.
 
 Bu projeyi yazarken aklımdaki senaryo şuydu: bir mikrodenetleyici belirli aralıklarla sıcaklık ve nem ölçüyor, bunu birkaç baytlık bir pakete sarıp ağ üzerinden gönderiyor. Karşı tarafta da bu paketleri güvenle ayrıştırabilen, bozuk veri geldiğinde çökmeyen, kaynak tüketimi düşük bir alıcı gerekiyor. JSON gibi metin tabanlı formatlar bu tür cihazlar için hem bant genişliği hem de işlemci açısından fazla ağır kalabiliyor, o yüzden sabit yapılı bir ikili format tercih ettim.
